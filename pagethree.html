@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Chatroom1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      function showText(id,delay){
+      var elem=document.getElementById(id);
+      setTimeout(function(){elem.style.visibility='visible';},delay*1000)
+    }
+    window.onload=function(){
+    showText('delayedText1',3);
+    showText('delayedText2',5);
+    showText('delayedText3',8);
+    showText('delayedText4',12);
+    }
+  </script>
+  </head>
+    <body>
+      <img src ="images/planet.jpg">
+    <h1>WELCOME TO THE CHATROOM</h1>
+    <div class="container" id="delayedText1" style="visibility:hidden">
+      <p>Hello.How are you today?</p>
+      <span class="time-right">11:00</span>
+      <span class="name-left"> Pussy Destoryer69</span>
+    </div>
+
+    <div class="container darker" id="delayedText2" style="visibility:hidden">
+      <p>Hey! I'm fine. Thanks for asking!</p>
+      <span class="time-left">11:00</span>
+      <span class="name-right"> Pussy Destoryer69</span>
+    </div>
+
+    <div class="container" id="delayedText3" style="visibility:hidden">
+      <p>Sweet! So, what do you wanna do today?</p>
+      <span class="time-right">11:01</span>
+    </div>
+
+    <div class="container darker"id="delayedText4" style="visibility:hidden">
+      <p>Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+      <span class="time-left">11:01</span>
+    </div>
+
+    <form action="PayslipServlet" method="get">
+          <input type="text" name="input" id="text"><br/>
+          <span id="result"></span>
+          <br><input type="button" value="Submit" onClick="pr()">
+      </form>
+    <script>
+      function pr() {
+        document.getElementById("result").innerHTML = document.getElementById('text').value;
+      }
+   </script>
+
+    <h5><a href="index.html">home</a></h5>
+  </body>
+</html>
